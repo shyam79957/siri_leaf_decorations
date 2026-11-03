@@ -1,0 +1,29 @@
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: var(--gold);
+  margin: 20px auto;
+  max-width: 240px;
+}
+
+.light {
+  color: var(--gold-light);
+}
+
+.line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, currentColor);
+}
+
+.line:last-child {
+  background: linear-gradient(90deg, currentColor, transparent);
+}
+
+.mark {
+  width: 30px;
+  height: 13px;
+  flex-shrink: 0;
+}

@@ -1,0 +1,85 @@
+.logo {
+  --c: var(--green-900);
+  --base: 44px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--c);
+  font-family: var(--font-serif);
+  line-height: 1;
+  user-select: none;
+}
+
+.light {
+  --c: var(--cream);
+}
+
+.sm {
+  --base: 34px;
+}
+.md {
+  --base: 56px;
+}
+.lg {
+  --base: clamp(76px, 15vw, 128px);
+}
+
+.word {
+  font-size: var(--base);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  display: inline-flex;
+  align-items: baseline;
+  padding-top: calc(var(--base) * 0.26);
+}
+
+.iWrap {
+  position: relative;
+  display: inline-block;
+  margin: 0 0.015em;
+}
+
+.sprig {
+  position: absolute;
+  left: 50%;
+  bottom: 0.56em;
+  width: 0.62em;
+  height: 0.5em;
+  transform: translateX(-50%);
+  color: var(--c);
+}
+
+.sub {
+  font-size: calc(var(--base) * 0.25);
+  font-weight: 600;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  margin-top: calc(var(--base) * 0.04);
+  padding-left: 0.32em; /* balance trailing letter-spacing */
+}
+
+.tagline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: calc(var(--base) * 0.16);
+  font-size: calc(var(--base) * 0.2);
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.light .tagline {
+  color: var(--gold-light);
+}
+
+.rule {
+  width: 120%;
+  max-width: 340px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+.lg .tagline {
+  font-size: clamp(1.1rem, 2.6vw, 1.55rem);
+}

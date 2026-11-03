@@ -1,0 +1,162 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  border: 1px solid rgba(168, 135, 58, 0.22);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+.media {
+  position: relative;
+  aspect-ratio: 4 / 4.2;
+  overflow: hidden;
+  background: var(--ivory);
+}
+
+.media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.card:hover .media img {
+  transform: scale(1.05);
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 22px 22px 22px;
+}
+
+/* name on the left, price on the right */
+.titleRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.card .name {
+  font-size: 1.55rem;
+  margin: 0;
+  color: var(--green-900);
+  min-width: 0;
+}
+
+.price {
+  flex-shrink: 0;
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--green-900);
+}
+
+.priceAsk {
+  flex-shrink: 0;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  white-space: nowrap;
+}
+
+.unit {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 6px 0 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(168, 135, 58, 0.18);
+}
+
+.desc {
+  font-size: 0.92rem;
+  color: var(--muted);
+  flex: 1;
+  margin-bottom: 20px;
+}
+
+/* ---------- Action buttons ---------- */
+.actions {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 10px;
+}
+
+.action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  height: 44px;
+  padding: 0 14px;
+  border-radius: var(--radius-sm);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.action svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.order {
+  background: var(--green-900);
+  color: var(--cream);
+  border: 1px solid var(--green-900);
+}
+
+.order svg {
+  color: var(--gold-light);
+  transition: color 0.25s ease;
+}
+
+.order:hover {
+  background: var(--green-800);
+  box-shadow: 0 8px 20px rgba(16, 40, 26, 0.22);
+}
+
+.order:hover svg {
+  color: #fff;
+}
+
+.dm {
+  background: transparent;
+  color: var(--green-900);
+  border: 1px solid rgba(23, 59, 38, 0.35);
+}
+
+.dm svg {
+  color: var(--gold);
+  transition: color 0.25s ease;
+}
+
+.dm:hover {
+  border-color: var(--green-900);
+  background: var(--green-900);
+  color: var(--cream);
+}
+
+.dm:hover svg {
+  color: var(--gold-light);
+}
