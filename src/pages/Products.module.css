@@ -96,15 +96,18 @@
 }
 
 @media (max-width: 560px) {
+  /* two compact cards per row on phones */
   .grid {
-    --cols: 1;
+    --cols: 2;
+    --gap: 12px;
   }
   .filters {
     flex-wrap: nowrap;
     justify-content: flex-start;
     overflow-x: auto;
-    margin: 0 -20px 32px;
-    padding: 4px 20px;
+    /* bleed to the screen edges: matches the 18px phone container padding */
+    margin: 0 -18px 32px;
+    padding: 4px 18px;
     scrollbar-width: none;
   }
   .filters::-webkit-scrollbar {

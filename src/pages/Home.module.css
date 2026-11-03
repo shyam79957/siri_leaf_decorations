@@ -454,7 +454,8 @@
     grid-template-columns: 1fr;
   }
   .featured {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
   }
   .occasion {
     min-height: 84px;
@@ -466,5 +467,13 @@
   }
   .ctaInner .actions {
     margin: 0 auto;
+  }
+}
+
+/* Slightly larger small caps on phones for readability */
+@media (max-width: 640px) {
+  .heroEyebrow,
+  .promiseBar li {
+    font-size: 0.8rem;
   }
 }

@@ -198,3 +198,122 @@
 .dm:hover svg {
   color: var(--gold-light);
 }
+
+/* ---------- Compact card for phones (2 per row) ---------- */
+@media (max-width: 560px) {
+  .card:hover {
+    transform: none;
+  }
+
+  .media {
+    aspect-ratio: 1 / 1;
+  }
+
+  .body {
+    padding: 12px 12px 12px;
+  }
+
+  /* price drops under the name: not enough width side by side */
+  .titleRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .card .name {
+    font-size: 1.12rem;
+    line-height: 1.2;
+  }
+
+  .price {
+    font-size: 1.25rem;
+  }
+
+  .priceAsk {
+    font-size: 0.6rem;
+    padding: 3px 0;
+  }
+
+  .unitRow {
+    gap: 4px 8px;
+    margin: 6px 0 10px;
+    padding-bottom: 10px;
+  }
+
+  .unit {
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+    line-height: 1.5;
+  }
+
+  .offer s {
+    font-size: 0.92rem;
+  }
+
+  .offer span {
+    font-size: 0.56rem;
+    letter-spacing: 0.08em;
+    padding: 2px 7px;
+  }
+
+  /* description is shown on larger screens only */
+  .desc {
+    display: none;
+  }
+
+  /* Order button + square Instagram icon button, pinned to the card bottom */
+  .actions {
+    grid-template-columns: 1fr 40px;
+    gap: 6px;
+    margin-top: auto;
+  }
+
+  .action {
+    height: 40px;
+    padding: 0 8px;
+    gap: 6px;
+    font-size: 0.66rem;
+    letter-spacing: 0.1em;
+  }
+
+  .action svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .dm {
+    padding: 0;
+  }
+
+  .dm span {
+    display: none; /* link keeps its aria-label for screen readers */
+  }
+}
+
+/* very small phones (e.g. 320px wide): tighten so both buttons fit */
+@media (max-width: 374px) {
+  .body {
+    padding: 12px 10px;
+  }
+
+  .actions {
+    grid-template-columns: minmax(0, 1fr) 38px;
+    gap: 5px;
+  }
+
+  .action {
+    min-width: 0;
+    padding: 0 4px;
+    gap: 5px;
+    letter-spacing: 0.06em;
+  }
+
+  .action svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .dm {
+    padding: 0;
+  }
+}
