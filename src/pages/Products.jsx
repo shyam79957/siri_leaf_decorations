@@ -12,7 +12,7 @@ import styles from './Products.module.css';
 export default function Products() {
   usePageMeta(
     'Products & Prices',
-    'Price list for Siri Decorations coconut leaf products: baskets, bells, mats, dhandalu, chilakalu and nemali vankilu.'
+    'Price list for Siri Decorations coconut leaf products: baskets, bells, mats, dhandalu, chilakalu, thoranalu and nela vankilu.'
   );
   const [params, setParams] = useSearchParams();
   const active = categories.some((c) => c.id === params.get('category')) ? params.get('category') : 'all';

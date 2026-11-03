@@ -1,7 +1,7 @@
 // Product catalog: edit names, prices or units here.
 import greenBasket from '../assets/products/green-basket.jpg';
 import bell from '../assets/products/bell.jpg';
-import nemaliVankilu from '../assets/products/nemali-vankilu.jpg';
+import nelaVankilu from '../assets/products/nela-vankilu.jpg';
 import greenMat from '../assets/products/green-mat.jpg';
 import mixedMat from '../assets/products/mixed-mat.jpg';
 import whiteMat from '../assets/products/white-mat.jpg';
@@ -26,13 +26,14 @@ export const categories = [
 ];
 
 // price: null shows "Price on request" until a price is filled in
+// mrp (optional): regular price, shown struck through next to the offer price
 
 export const products = [
   {
     id: 'green-basket',
     name: 'Green Basket',
     category: 'baskets-bells',
-    price: 400,
+    price: 350,
     unit: '1 piece',
     image: greenBasket,
     description:
@@ -54,28 +55,28 @@ export const products = [
     id: 'white-basket',
     name: 'White Basket',
     category: 'baskets-bells',
-    price: null,
+    price: 450,
     unit: '1 piece',
     image: whiteBasket,
     description:
       'Round basket hand-woven from pale tender coconut leaves. An elegant choice for return gifts, flowers and pooja items.',
   },
   {
-    id: 'nemali-vankilu',
-    name: 'Nemali Vankilu',
+    id: 'nela-vankilu',
+    name: 'Nela Vankilu',
     category: 'special',
     price: 500,
     unit: '1 piece',
-    image: nemaliVankilu,
+    image: nelaVankilu,
     description:
-      'A curving leaf design inspired by the peacock. A centrepiece for wedding stages and decor.',
+      'A graceful curving leaf design, hand-folded from fresh coconut leaves. A centrepiece for wedding stages and decor.',
     featured: true,
   },
   {
     id: 'green-mat',
     name: 'Green Mat',
     category: 'mats',
-    price: 35,
+    price: 30,
     unit: '1 × 1 ft',
     image: greenMat,
     description:
@@ -126,7 +127,7 @@ export const products = [
     id: 'green-dhanda',
     name: 'Green Dhanda',
     category: 'dhandalu',
-    price: null,
+    price: 80,
     unit: '1 feet',
     image: greenDhanda,
     description:
@@ -156,17 +157,17 @@ export const products = [
     id: 'green-chilaka',
     name: 'Green Chilaka',
     category: 'chilakalu',
-    price: null,
+    price: 30,
     unit: '1 piece',
     image: greenChilaka,
     description:
       'Parrot folded from green coconut leaves, with a red beak and yellow ribbon. A classic auspicious hanging.',
   },
   {
-    id: 'ring-bird',
-    name: 'Ring Bird',
+    id: 'ring-chilaka',
+    name: 'Ring Chilaka',
     category: 'chilakalu',
-    price: null,
+    price: 40,
     unit: '1 piece',
     image: ringBird,
     description:
@@ -176,8 +177,9 @@ export const products = [
     id: 'thoranalu',
     name: 'Thoranalu',
     category: 'thoranalu',
-    price: null,
-    unit: '1 piece',
+    price: 500,
+    mrp: 550, // regular price, shown struck through with "Save ₹50"
+    unit: 'Set of 50 pieces (minimum order)',
     image: thoranalu,
     description:
       'Traditional hanging of folded tender coconut leaves for doorways and mandapams, a sign of welcome and good fortune.',

@@ -6,6 +6,7 @@ import styles from './ProductCard.module.css';
 
 export default function ProductCard({ product }) {
   const priced = hasPrice(product.price);
+  const onOffer = priced && hasPrice(product.mrp) && product.mrp > product.price;
   return (
     <article className={styles.card}>
       <div className={styles.media}>
@@ -26,7 +27,15 @@ export default function ProductCard({ product }) {
             <span className={styles.priceAsk}>On request</span>
           )}
         </div>
-        <p className={styles.unit}>{product.unit}</p>
+        <div className={styles.unitRow}>
+          <p className={styles.unit}>{product.unit}</p>
+          {onOffer && (
+            <p className={styles.offer}>
+              <s>{formatPrice(product.mrp)}</s>
+              <span>Save {formatPrice(product.mrp - product.price)}</span>
+            </p>
+          )}
+        </div>
         <p className={styles.desc}>{product.description}</p>
 
         <div className={styles.actions}>

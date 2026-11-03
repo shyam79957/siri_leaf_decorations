@@ -23,7 +23,7 @@ import whiteDhanda from '../assets/products/white-dhanda.jpg';
 import mixedDhanda from '../assets/products/mixed-dhanda.jpg';
 import ringBird from '../assets/products/ring-bird.jpg';
 import thoranalu from '../assets/products/thoranalu.jpg';
-import nemali from '../assets/products/nemali-vankilu.jpg';
+import nela from '../assets/products/nela-vankilu.jpg';
 import styles from './Home.module.css';
 
 const collectionImages = {
@@ -32,7 +32,7 @@ const collectionImages = {
   dhandalu: mixedDhanda,
   chilakalu: ringBird,
   thoranalu,
-  special: nemali,
+  special: nela,
 };
 
 // Lowest known price in each category; categories with no prices yet show "Price on request"
